@@ -30,6 +30,7 @@ extension SpotlightIndexServicing where Self: SpotlightIndexServicingActions {
 final class SpotlightIndexService: SpotlightIndexServicing, SpotlightIndexServicingActions {
     
     let itemRepository: ItemRepository
+    
     // MARK: - Initialization
     
     init(itemRepository: ItemRepository) {
@@ -39,7 +40,7 @@ final class SpotlightIndexService: SpotlightIndexServicing, SpotlightIndexServic
     // MARK: - Helpers
     
     /// Will create CSSearchableItem from every item that come from repository and index it thru func indexItems.
-    /// 5 Categories are showing - Info, News, Venue, Performer & Sessions(only on conf event)
+    /// 2 Example Categories are showing - First and Second
     func start() {
         itemRepository.allFirstItems.producer.observe(on: UIScheduler()).take(duringLifetimeOf: self).startWithValues { [weak self] items in
             let searchableItems = items.map { SearchItem.first($0).createSpotlightItem() }
@@ -110,15 +111,14 @@ final class SpotlightIndexService: SpotlightIndexServicing, SpotlightIndexServic
     ///
     /// Item won't be created if the category isn't recognize.
     private func createSearchItems(from results: [CSSearchableItem]) -> [SearchItem] {
-        // swiftlint:disable:previous cyclomatic_complexity
         return results.compactMap{ item -> SearchItem? in
             guard let contentType = item.attributeSet.contentType else { return nil }
             
             switch SearchItem.CategoryIdentifier(rawValue: contentType) {
-            case .first?:
+            case .categoryOne?:
                 guard let item = itemRepository.allFirstItems.value.first(where: { $0.id == item.uniqueIdentifier }) else { return nil }
                 return SearchItem.first(item)
-            case .second?:
+            case .categoryTwo?:
                 guard let item = itemRepository.allSecondItems.value.first(where: { $0.id == item.uniqueIdentifier }) else { return nil }
                 return SearchItem.second(item)
             case .none:

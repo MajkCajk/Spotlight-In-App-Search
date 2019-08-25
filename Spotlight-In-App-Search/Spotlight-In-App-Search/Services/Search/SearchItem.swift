@@ -20,8 +20,8 @@ extension SpotlightIndexService {
 
         /// Spotlight search `contentType` identifier for each type of entity
         enum CategoryIdentifier: String {
-            case first
-            case second
+            case categoryOne
+            case categoryTwo
         }
         
         /// Prepares `CSSearchableItem` from wrapped entity
@@ -29,9 +29,9 @@ extension SpotlightIndexService {
             switch self {
             case .first(let item):
                 let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
-                attributeSet.contentType = CategoryIdentifier.first.rawValue
+                attributeSet.contentType = CategoryIdentifier.categoryOne.rawValue
                 attributeSet.title = item.name
-                attributeSet.set(contentDescription: item.description)
+                attributeSet.contentDescription = item.description
                 
                 attributeSet.information = [item.name, item.description]
                     .compactMap { $0 }
@@ -40,10 +40,10 @@ extension SpotlightIndexService {
                 return CSSearchableItem(uniqueIdentifier: item.id, domainIdentifier: Bundle.main.bundleIdentifier, attributeSet: attributeSet)
             case .second(let item):
                 let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeText as String)
-                attributeSet.contentType = CategoryIdentifier.second.rawValue
+                attributeSet.contentType = CategoryIdentifier.categoryTwo.rawValue
                 attributeSet.title = item.name
-                attributeSet.set(contentDescription: item.description)
-                
+                attributeSet.contentDescription = item.description
+
                 attributeSet.information = [item.name, item.description]
                     .compactMap { $0 }
                     .joined(separator: " ")
@@ -69,17 +69,3 @@ extension SpotlightIndexService {
         }
     }
 }
-
-/// Just helpers for easier work with `CSSearchableItemAttributeSet`
-fileprivate extension CSSearchableItemAttributeSet {
-    
-    /// Cut off given description and set it to `CSSearchableItemAttributeSet`
-    ///
-    /// Spotlight index in-app search is not able search thru strings that are longer than 1028 characters(don't know why). Description is the longest and the least important, so i set a boundary to 800 - approximate number. So thanks to that, the attributeSet for search ('information') filled with title, cutted desctiption, tags etc. is shorter than 1028 char.
-    func set(contentDescription: String?) {
-        if let contentDescription = contentDescription {
-            self.contentDescription = String(contentDescription.prefix(800))
-        }
-    }
-}
-
