@@ -8,7 +8,6 @@
 
 import Foundation
 
-/// Helpers for cleaner work with arrays
 extension Array where Element: Hashable {
     
     /// Will filter all duplicated elements in array.

@@ -14,7 +14,7 @@ import ReactiveCocoa
 
 /// This Controller enable to search thru spotlight indexes.
 /// Indexes and search is managed in SpotlightIndexService
-/// 5 Categories are showing - Info, News, Venue, Performer & Sessions(only on conf event)
+/// 2 Categories are showing - First and Second.
 final class SearchViewController: UIViewController {
     
     // MARK: - Properties
@@ -47,6 +47,7 @@ final class SearchViewController: UIViewController {
         
         view.backgroundColor = UIColor(named: "Background")
 
+        // View for searchBar shadow
         let viewForShadow = UIView()
         viewForShadow.layer.shadowRadius = 5
         viewForShadow.isUserInteractionEnabled = true
@@ -54,7 +55,8 @@ final class SearchViewController: UIViewController {
         viewForShadow.layer.shadowColor = UIColor(named: "TextPrimary")?.cgColor
         view.addSubview(viewForShadow)
         viewForShadow.snp.makeConstraints { make in
-            make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalToSuperview()
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
         }
         self.viewForShadow = viewForShadow
         
@@ -64,13 +66,14 @@ final class SearchViewController: UIViewController {
         searchBar.rightView?.tintColor = UIColor(named: "Secondary")
         viewForShadow.addSubview(searchBar)
         searchBar.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(8)
+            make.top.equalToSuperview().offset(68)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(48)
             make.bottom.equalToSuperview().inset(24)
         }
         self.searchBar = searchBar
         
+        // View under the SearchBar for TableView and noResultLabel.
         let bottomView = UIView()
         view.addSubview(bottomView)
         bottomView.snp.makeConstraints { make in
@@ -132,6 +135,8 @@ final class SearchViewController: UIViewController {
         tableView.reactive.isHidden <~ viewModel.isTableViewHidden
         noResultLabel.reactive.isHidden <~ viewModel.isNoResultLabelHidden
         tableView.reactive.reloadData <~ viewModel.foundItems.map { _ in }
+        
+        // Bind textField and MutablyProperty that triggers search action
         viewModel.searchText <~> searchBar
     }
     
