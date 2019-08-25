@@ -16,7 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = SearchViewController()
+        
+        let itemRepository = ItemRepository()
+        let searchService = SpotlightIndexService(itemRepository: itemRepository)
+        searchService.start()
+        let viewModel = SearchViewModel(searchService: searchService)
+        let viewController = SearchViewController(viewModel: viewModel)
+        
         window!.rootViewController = viewController
         window!.makeKeyAndVisible()
         return true
