@@ -11,6 +11,17 @@
 		BB0EF0AF22F6228000277723 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0EF0AE22F6228000277723 /* SearchViewController.swift */; };
 		BB0EF0B422F6228200277723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB0EF0B322F6228200277723 /* Assets.xcassets */; };
 		BB0EF0B722F6228200277723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB0EF0B522F6228200277723 /* LaunchScreen.storyboard */; };
+		BB404515231153DA008E21DD /* SeachBarTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB404514231153DA008E21DD /* SeachBarTextField.swift */; };
+		BB40451A23115C39008E21DD /* SeachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40451923115C39008E21DD /* SeachViewModel.swift */; };
+		BB40451E231169F3008E21DD /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40451D231169F3008E21DD /* SearchCell.swift */; };
+		BB4045202311949C008E21DD /* SpotlightIndexService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40451F2311949C008E21DD /* SpotlightIndexService.swift */; };
+		BB4045222311951A008E21DD /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4045212311951A008E21DD /* SearchItem.swift */; };
+		BB4045272312BC93008E21DD /* FirstItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4045262312BC93008E21DD /* FirstItem.swift */; };
+		BB40452B2312CFBA008E21DD /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40452A2312CFBA008E21DD /* Array.swift */; };
+		BB40452D2312D0DF008E21DD /* SecondItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40452C2312D0DF008E21DD /* SecondItem.swift */; };
+		BB4045302312D1C6008E21DD /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB40452F2312D1C6008E21DD /* ItemRepository.swift */; };
+		BB4045322312DDF4008E21DD /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4045312312DDF4008E21DD /* ReactiveCocoa.framework */; };
+		BB4045342312DE0D008E21DD /* ReactiveMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4045332312DE0D008E21DD /* ReactiveMapKit.framework */; };
 		BB8FD24523114E8F006159D1 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8FD24323114E8F006159D1 /* ReactiveSwift.framework */; };
 		BB8FD24623114E8F006159D1 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8FD24423114E8F006159D1 /* SnapKit.framework */; };
 /* End PBXBuildFile section */
@@ -22,6 +33,17 @@
 		BB0EF0B322F6228200277723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB0EF0B622F6228200277723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB0EF0B822F6228200277723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB404514231153DA008E21DD /* SeachBarTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachBarTextField.swift; sourceTree = "<group>"; };
+		BB40451923115C39008E21DD /* SeachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachViewModel.swift; sourceTree = "<group>"; };
+		BB40451D231169F3008E21DD /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		BB40451F2311949C008E21DD /* SpotlightIndexService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightIndexService.swift; sourceTree = "<group>"; };
+		BB4045212311951A008E21DD /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
+		BB4045262312BC93008E21DD /* FirstItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstItem.swift; sourceTree = "<group>"; };
+		BB40452A2312CFBA008E21DD /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		BB40452C2312D0DF008E21DD /* SecondItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondItem.swift; sourceTree = "<group>"; };
+		BB40452F2312D1C6008E21DD /* ItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
+		BB4045312312DDF4008E21DD /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		BB4045332312DE0D008E21DD /* ReactiveMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMapKit.framework; path = Carthage/Build/iOS/ReactiveMapKit.framework; sourceTree = "<group>"; };
 		BB8FD24323114E8F006159D1 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		BB8FD24423114E8F006159D1 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +55,8 @@
 			files = (
 				BB8FD24523114E8F006159D1 /* ReactiveSwift.framework in Frameworks */,
 				BB8FD24623114E8F006159D1 /* SnapKit.framework in Frameworks */,
+				BB4045342312DE0D008E21DD /* ReactiveMapKit.framework in Frameworks */,
+				BB4045322312DDF4008E21DD /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,17 +84,84 @@
 			isa = PBXGroup;
 			children = (
 				BB0EF0AC22F6228000277723 /* AppDelegate.swift */,
-				BB0EF0AE22F6228000277723 /* SearchViewController.swift */,
-				BB0EF0B322F6228200277723 /* Assets.xcassets */,
+				BB4045252312BC52008E21DD /* Model */,
+				BB404516231154F4008E21DD /* Extensions */,
+				BB404513231153CB008E21DD /* View */,
+				BB40451C231160C4008E21DD /* Search */,
+				BB4045232312BC1D008E21DD /* Services */,
+				BB40452E2312D1B4008E21DD /* Repositories */,
 				BB0EF0B522F6228200277723 /* LaunchScreen.storyboard */,
+				BB0EF0B322F6228200277723 /* Assets.xcassets */,
 				BB0EF0B822F6228200277723 /* Info.plist */,
 			);
 			path = "Spotlight-In-App-Search";
 			sourceTree = "<group>";
 		};
+		BB404513231153CB008E21DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB404516231154F4008E21DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB40452A2312CFBA008E21DD /* Array.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB40451C231160C4008E21DD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BB0EF0AE22F6228000277723 /* SearchViewController.swift */,
+				BB40451923115C39008E21DD /* SeachViewModel.swift */,
+				BB40451D231169F3008E21DD /* SearchCell.swift */,
+				BB404514231153DA008E21DD /* SeachBarTextField.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		BB4045232312BC1D008E21DD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BB4045242312BC41008E21DD /* Search */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BB4045242312BC41008E21DD /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BB40451F2311949C008E21DD /* SpotlightIndexService.swift */,
+				BB4045212311951A008E21DD /* SearchItem.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		BB4045252312BC52008E21DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB4045262312BC93008E21DD /* FirstItem.swift */,
+				BB40452C2312D0DF008E21DD /* SecondItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BB40452E2312D1B4008E21DD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BB40452F2312D1C6008E21DD /* ItemRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		BB8FD24223114E8F006159D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB4045332312DE0D008E21DD /* ReactiveMapKit.framework */,
+				BB4045312312DDF4008E21DD /* ReactiveCocoa.framework */,
 				BB8FD24323114E8F006159D1 /* ReactiveSwift.framework */,
 				BB8FD24423114E8F006159D1 /* SnapKit.framework */,
 			);
@@ -154,6 +245,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMapKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -170,7 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4045222311951A008E21DD /* SearchItem.swift in Sources */,
 				BB0EF0AF22F6228000277723 /* SearchViewController.swift in Sources */,
+				BB40451E231169F3008E21DD /* SearchCell.swift in Sources */,
+				BB4045272312BC93008E21DD /* FirstItem.swift in Sources */,
+				BB40451A23115C39008E21DD /* SeachViewModel.swift in Sources */,
+				BB40452B2312CFBA008E21DD /* Array.swift in Sources */,
+				BB4045302312D1C6008E21DD /* ItemRepository.swift in Sources */,
+				BB404515231153DA008E21DD /* SeachBarTextField.swift in Sources */,
+				BB40452D2312D0DF008E21DD /* SecondItem.swift in Sources */,
+				BB4045202311949C008E21DD /* SpotlightIndexService.swift in Sources */,
 				BB0EF0AD22F6228000277723 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
