@@ -10,9 +10,15 @@ I did it and this is sample app that shows how to do it.
 BUT it has its cons and pros.
 
 ## Pros 
+* "Kill two birds with one stone" - Simultaneously make search in your app and put content to Spotlight.
+* Easy to implement.
+* Native.
 
 ## Cons 
+* Black box - There is a little of documentations about it. You don't know how fast it is. 
+* Adding and removing from the stack is not certain(it's not given that it happenned)
+
+## Beware!
+
 
 ## Usage 
-
-#ios/notes
